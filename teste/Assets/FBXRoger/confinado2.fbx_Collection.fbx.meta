@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: d15778d255e66e046be4228c0cc0d7ed
+timeCreated: 1682374865
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Cilindro.002
+    100002: Cilindro.013
+    100004: Cilindro.014
+    100006: Cilindro.015
+    100008: Cilindro.016
+    100010: Cilindro.017
+    100012: //RootNode
+    100014: Cube
+    100016: Cube.001
+    100018: Cube.002
+    100020: Cube.003
+    100022: Cube.005
+    100024: Cube.006
+    100026: Cube.008
+    100028: Cubo
+    100030: Cubo.002
+    100032: "C\xE2mera"
+    100034: Light
+    100036: Ponto
+    400000: Cilindro.002
+    400002: Cilindro.013
+    400004: Cilindro.014
+    400006: Cilindro.015
+    400008: Cilindro.016
+    400010: Cilindro.017
+    400012: //RootNode
+    400014: Cube
+    400016: Cube.001
+    400018: Cube.002
+    400020: Cube.003
+    400022: Cube.005
+    400024: Cube.006
+    400026: Cube.008
+    400028: Cubo
+    400030: Cubo.002
+    400032: "C\xE2mera"
+    400034: Light
+    400036: Ponto
+    2000000: "C\xE2mera"
+    2300000: Cilindro.002
+    2300002: Cilindro.013
+    2300004: Cilindro.014
+    2300006: Cilindro.015
+    2300008: Cilindro.016
+    2300010: Cilindro.017
+    2300012: Cube
+    2300014: Cube.001
+    2300016: Cube.002
+    2300018: Cube.003
+    2300020: Cube.005
+    2300022: Cube.006
+    2300024: Cube.008
+    2300026: Cubo
+    2300028: Cubo.002
+    3300000: Cilindro.002
+    3300002: Cilindro.013
+    3300004: Cilindro.014
+    3300006: Cilindro.015
+    3300008: Cilindro.016
+    3300010: Cilindro.017
+    3300012: Cube
+    3300014: Cube.001
+    3300016: Cube.002
+    3300018: Cube.003
+    3300020: Cube.005
+    3300022: Cube.006
+    3300024: Cube.008
+    3300026: Cubo
+    3300028: Cubo.002
+    4300000: Cube
+    4300002: Cube.001
+    4300004: Cube.002
+    4300006: Cube.005
+    4300008: Cilindro.002
+    4300010: Cubo
+    4300012: Cube.006
+    4300014: Cube.008
+    4300016: Cube.003
+    4300018: Cilindro.013
+    4300020: Cilindro.014
+    4300022: Cilindro.015
+    4300024: Cubo.002
+    4300026: Cilindro.016
+    4300028: Cilindro.017
+    10800000: Light
+    10800002: Ponto
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scene/teste.unity
+    guid: aeea3853de56b1341a3e733d2f6dd039
+  - enabled: 0
+    path: Assets/Scene/scenePrincipal.unity
+    guid: b985c4349b9ed4242a31393313ca784e
+  - enabled: 0
+    path: Assets/Planet Earth Free/Demo.unity
+    guid: df593a320500c864b944dbe6d9028b42
+  - enabled: 0
+    path: Assets/Scene/scenePrincipal 1.unity
+    guid: 3caed5a6a472981479ee991e0c60c7f6
+  - enabled: 0
+    path: Assets/Scene/Start.unity
+    guid: 381fc3d1425f3fd408b3dc5c51852be9
+  - enabled: 1
+    path: Assets/Scene/scenePrincipal 2.unity
+    guid: 12bbe14066547a44b82d8b1f4df6011d
