@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
-public class RVPlayer : MonoBehaviour {
+//[RequireComponent(typeof(AudioSource))]
+public class RVPlayer : MonoBehaviour
+{
 
+	public static RVPlayer instance;
 
 	public Camera cameraRayCast;
 	public float speed = 0.7f;
@@ -36,35 +38,64 @@ public class RVPlayer : MonoBehaviour {
 	public float tempoesperar;
 
 	public bool isDestino;
+
+	private Rigidbody rbPlayer;
+	public float movimentoX;
+
+	public bool verificarDirecao;
+
+	public Transform direcaoMovemento;
 	// Use this for initialization
-	void Start() {
+	void Start()
+	{
 
 		audioSource = GetComponent<AudioSource>();
+		rbPlayer = GetComponent<Rigidbody>();
 
 
 	}
 
 	// Update is called once per frame
-	void Update() {
+	void Update()
+	{
 
-		Ray ray = cameraRayCast.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-		if (gvrStatus) {
-			gvrTime += Time.deltaTime;
+		float movimento = Input.GetAxisRaw("Vertical");
 
-			imgGaze.fillAmount = gvrTime / totalTime;
+		if (Input.GetKeyDown(KeyCode.W) || movimento == 1)
+		{
+			Debug.Log("Apertar botao");
+			rbPlayer.velocity = direcaoMovemento.forward*2;
+		}
+		if (Input.GetKeyUp(KeyCode.W) || movimento == 0)
+		{
+			rbPlayer.velocity = direcaoMovemento.forward * 0;
 		}
 
 
-		if (Physics.Raycast(ray, out hit, distanceToMove)) {
+		Ray ray = cameraRayCast.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+		if (gvrStatus)
+		{
+			gvrTime += Time.deltaTime;
+
+			imgGaze.fillAmount = gvrTime / totalTime;
+
+
+		}
+
+
+		if (Physics.Raycast(ray, out hit, distanceToMove))
+		{
 
 			float scaleArrow = Vector3.Distance(hit.transform.position, this.transform.position) / 13000;
 
 			arrowToMove.transform.localScale = new Vector3(scaleArrow, scaleArrow, scaleArrow);
 			arrowToMove.transform.position = hit.transform.position;
+
+			Debug.Log("Porta");
 		}
 
 
-
+		/*
 
 		if (Physics.Raycast(ray, out hit, distanceToMove)) {
 
@@ -89,35 +120,36 @@ public class RVPlayer : MonoBehaviour {
 
 
             }
+		     
+			*/
+
+		/*
+
+		if (Input.GetMouseButtonDown(0)) {
+
+			if (Physics.Raycast(ray, out hit, distanceToMove)) {
+
+				if (hit.transform.tag == "AllowerPosition") {
+
+					audioSource.clip = clickASound;
+					audioSource.Play();
+
+					starPoint = transform.position;
+
+					endPoint = hit.transform.position;
+
+					starTime = Time.time;
+
+					jorneyLength = Vector3.Distance(starPoint, endPoint);
+
+					flagStop = true;
+				}
 
 
-			/*
 
-			if (Input.GetMouseButtonDown(0)) {
+	}*/
 
-				if (Physics.Raycast(ray, out hit, distanceToMove)) {
-
-					if (hit.transform.tag == "AllowerPosition") {
-
-						audioSource.clip = clickASound;
-						audioSource.Play();
-
-						starPoint = transform.position;
-
-						endPoint = hit.transform.position;
-
-						starTime = Time.time;
-
-						jorneyLength = Vector3.Distance(starPoint, endPoint);
-
-						flagStop = true;
-					}
-
-
-
-		}*/
-	
-
+		/*
 			if (flagStop) {
 
 				float distConverd = (Time.time - starTime) * speed;
@@ -138,14 +170,11 @@ public class RVPlayer : MonoBehaviour {
 
 			}
 
+		*/
 
-
-		}
-
-	
 	}
 
-
+	/*
 	public void painelInfo() {
 
 		audioSource.clip = clickASound;
@@ -176,5 +205,9 @@ public class RVPlayer : MonoBehaviour {
 		isDestino = false;
 
 
-	}
+	}*/
+
 }
+
+
+
