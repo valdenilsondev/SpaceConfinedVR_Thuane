@@ -60,8 +60,10 @@ public class RVPlayer : MonoBehaviour
 	{
 
 		float movimento = Input.GetAxisRaw("Vertical");
+		float movim = Input.GetAxis("Submit");
 
-		if (Input.GetKeyDown(KeyCode.W) || movimento == 1)
+
+		if (Input.GetButton("Vertical") || movimento == 1 || movim == 1)
 		{
 			Debug.Log("Apertar botao");
 			rbPlayer.velocity = direcaoMovemento.forward*2;
