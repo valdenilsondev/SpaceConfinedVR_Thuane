@@ -63,7 +63,7 @@ public class RVPlayer : MonoBehaviour
 		float movim = Input.GetAxis("Submit");
 
 
-		if (Input.GetButton("Vertical") || movimento == 1 || movim == 1)
+		/*if (Input.GetButton("Vertical") || movimento == 1 || movim == 1)
 		{
 			Debug.Log("Apertar botao");
 			rbPlayer.velocity = direcaoMovemento.forward*2;
@@ -72,7 +72,7 @@ public class RVPlayer : MonoBehaviour
 		{
 			rbPlayer.velocity = direcaoMovemento.forward * 0;
 		}
-
+		*/
 
 		Ray ray = cameraRayCast.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 		if (gvrStatus)
@@ -93,15 +93,17 @@ public class RVPlayer : MonoBehaviour
 			arrowToMove.transform.localScale = new Vector3(scaleArrow, scaleArrow, scaleArrow);
 			arrowToMove.transform.position = hit.transform.position;
 
-			Debug.Log("Porta");
+		
 		}
 
 
-		/*
 
-		if (Physics.Raycast(ray, out hit, distanceToMove)) {
 
-			if (imgGaze.fillAmount == 1 && hit.transform.tag == "AllowerPosition" && isDestino == false) {
+		if (Physics.Raycast(ray, out hit, distanceToMove))
+		{
+
+			if (imgGaze.fillAmount == 1 && hit.transform.tag == "AllowerPosition" && isDestino == false)
+			{
 
 				audioSource.clip = clickASound;
 				audioSource.Play();
@@ -118,41 +120,43 @@ public class RVPlayer : MonoBehaviour
 				isDestino = true;
 			}
 
-			if(imgGaze.fillAmount == 1 && hit.transform.tag == "quadro") {
+			if (imgGaze.fillAmount == 1 && hit.transform.tag == "quadro")
+			{
 
 
-            }
-		     
-			*/
-
-		/*
-
-		if (Input.GetMouseButtonDown(0)) {
-
-			if (Physics.Raycast(ray, out hit, distanceToMove)) {
-
-				if (hit.transform.tag == "AllowerPosition") {
-
-					audioSource.clip = clickASound;
-					audioSource.Play();
-
-					starPoint = transform.position;
-
-					endPoint = hit.transform.position;
-
-					starTime = Time.time;
-
-					jorneyLength = Vector3.Distance(starPoint, endPoint);
-
-					flagStop = true;
-				}
+			}
 
 
 
-	}*/
+			/*
 
-		/*
-			if (flagStop) {
+			if (Input.GetMouseButtonDown(0)) {
+
+				if (Physics.Raycast(ray, out hit, distanceToMove)) {
+
+					if (hit.transform.tag == "AllowerPosition") {
+
+						audioSource.clip = clickASound;
+						audioSource.Play();
+
+						starPoint = transform.position;
+
+						endPoint = hit.transform.position;
+
+						starTime = Time.time;
+
+						jorneyLength = Vector3.Distance(starPoint, endPoint);
+
+						flagStop = true;
+					}
+
+
+
+		}*/
+
+
+			if (flagStop)
+			{
 
 				float distConverd = (Time.time - starTime) * speed;
 
@@ -163,43 +167,48 @@ public class RVPlayer : MonoBehaviour
 				this.transform.position = move;
 
 
-				if (this.transform.position == endPoint) {
+				if (this.transform.position == endPoint)
+				{
 
 
 					flagStop = false;
 				}
-				
+
 
 			}
 
+
+
+		}
+
+		/*
+		public void painelInfo() {
+
+			audioSource.clip = clickASound;
+			audioSource.Play();
+
+			starPoint = transform.position;
+
+			endPoint = hit.transform.position;
+
+			starTime = Time.time;
+
+			jorneyLength = Vector3.Distance(starPoint, endPoint);
+
+			flagStop = true;
+
+
+		}
 		*/
-
+		
 	}
-
-	/*
-	public void painelInfo() {
-
-		audioSource.clip = clickASound;
-		audioSource.Play();
-
-		starPoint = transform.position;
-
-		endPoint = hit.transform.position;
-
-		starTime = Time.time;
-
-		jorneyLength = Vector3.Distance(starPoint, endPoint);
-
-		flagStop = true;
-
-
-	}
-
-	public void GazeON() {
+	public void GazeON()
+	{
 
 		gvrStatus = true;
 	}
-	public void GVROFF() {
+	public void GVROFF()
+	{
 
 		gvrStatus = false;
 		gvrTime = 0;
@@ -207,7 +216,7 @@ public class RVPlayer : MonoBehaviour
 		isDestino = false;
 
 
-	}*/
+	}
 
 }
 
