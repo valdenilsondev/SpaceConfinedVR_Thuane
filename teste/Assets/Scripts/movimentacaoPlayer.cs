@@ -16,17 +16,21 @@ public class movimentacaoPlayer : MonoBehaviour {
 	[Range(0.01f, 0.2f)]
 	public float height = 0.1f;
 
+
+	private RVPlayer playerRV;
+
 	private Vector3 posInit;
 
 
-
+	
 	
 	
 	
 	// Use this for initialization
 	void Start () {
 
-		posInit = new Vector3(this.transform.position.x-6.0f, this.transform.position.y + height, this.transform.position.z-3.5f);
+
+		posInit = new Vector3(this.transform.position.x-6.0f, this.transform.position.y + height, this.transform.position.z-4.5f);
 
 		for(int x = 0; x < lengthX; x ++) {
 
@@ -52,4 +56,6 @@ public class movimentacaoPlayer : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	
 }
